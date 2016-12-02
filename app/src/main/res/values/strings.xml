@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoFinal</string>
+    <string name="frmInicioObjetivos">Optimizar el tiempo de timbrado(o como sea que se diga) de los buses de la cooperativa San Francisco reducirá los costos operativos</string>
+    <string name="frmInicio">Inicio</string>
+    <string name="btnNameTimbradoInicio">Mapa Timbrado</string>
+    <string name="btnFlujoBusesInicio">Flujo Unidades</string>
+    <string name="btnHistorialInicio">Historial</string>
+    <string name="btnAjustesInicio">Ajustes</string>
+    <string name="btnHistorialAlertasInicio">Historial Alertas</string>
+    <string name="btnRegresarInicio">Regresar</string>
+</resources>
+

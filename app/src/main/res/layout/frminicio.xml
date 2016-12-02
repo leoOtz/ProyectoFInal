@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        >
+
+        <TextView
+            android:text="@string/frmInicio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:background="@color/colorAzulObscuro"/>
+
+        <view
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            class="android.view.View"
+            android:id="@+id/row_tab"
+            android:background="@color/colorAzulObscuro"/>
+
+
+    </LinearLayout>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dip" >
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="83dp"
+            android:text="@string/btnNameTimbradoInicio"
+            android:id="@+id/button1"
+            android:layout_weight="10"
+            android:onClick="ir"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="83dp"
+            android:text="@string/btnFlujoBusesInicio"
+            android:id="@+id/button2"
+            android:layout_weight="10"
+            android:onClick="flujounidades"/>
+    </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip" >
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btnHistorialInicio"
+                android:id="@+id/button3"
+                android:layout_weight="10"
+                android:onClick="irUnidad"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btnHistorialAlertasInicio"
+                android:id="@+id/button4"
+                android:layout_weight="10"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip" >
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btnAjustesInicio"
+                android:id="@+id/button5"
+                android:layout_weight="10"/>
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

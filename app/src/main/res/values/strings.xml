@@ -8,6 +8,24 @@
     <string name="btnAjustesInicio">Ajustes</string>
     <string name="btnHistorialAlertasInicio">Historial Alertas</string>
     <string name="btnRegresarInicio">Regresar</string>
+    <string name="pulsador_on">ON</string>
+    <string name="pulsadaor_off">OFF</string>
+    <string name="estado_bus">ESTADO DE BUSES</string>
+    <string name="btn_bus1">BUS 123</string>
+    <string name="btn_bus2">BUS 456</string>
+    <string name="btn_bus3">BUS 789</string>
+    <string name="requisitos_bus">REQUISITO BUS</string>
+    <string name="requisito1">Llantas</string>
+    <string name="requisito2">Alcoholemia</string>
+    <string name="requisito3">Luces</string>
+    <string name="requisito4">Plumas</string>
+    <string name="requisito5">Licencia</string>
+    <string name="requisito6">Matricula</string>
+    <string name="requisito7">Certificado RTV</string>
+    <string name="btn_ok">Aceptar</string>
+
+
+
 
 </resources>
 

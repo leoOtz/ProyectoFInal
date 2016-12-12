@@ -62,4 +62,15 @@ public class HistorialBuses extends AppCompatActivity {
         BusAdapter ba = new BusAdapter(this, datos);
         lvUnidades.setAdapter(ba);
     }
+    public void inicio(View view)
+    {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
+    }
+    public void irHora(View v)
+    {
+        Intent i = new Intent(this, SubMenuHistorial.class);
+        startActivity(i);
+    }
 }

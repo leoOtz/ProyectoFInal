@@ -35,8 +35,11 @@
     <string name="placaBus">Placa Bus</string>
     <string name="permisoBus">Permiso Municipal</string>
     <string name="title_activity_editar_bus">Editar Unidad</string>
-    <string name="tittleSubmenu">Que desea reaizar</string>
+    <string name="tittleSubmenu">Que desea realizar</string>
     <string name="lbl_eliminar">eliminar</string>
-
+    <string name="btnIngresarHistorico">Ingresar Historico</string>
+    <string name="btnEliminarHistorico">Eliminar Historico</string>
+    <string name="Fecha_horaSalida">Hora Salida</string>
+    <string name="Fecha_horaLLegada">Hora llegada</string>
 </resources>
 

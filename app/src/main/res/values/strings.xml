@@ -4,9 +4,11 @@
     <string name="frmInicio">Inicio</string>
     <string name="btnNameTimbradoInicio">Mapa Timbrado</string>
     <string name="btnFlujoBusesInicio">Flujo Unidades</string>
-    <string name="btnHistorialInicio">Historial</string>
+    <string name="btnHistorialInicio">Historial Ciclo Buses</string>
+    <string name="btnIngresarRecaudo">Ingresar Recaudo</string>
+    <string name="btnConsultarRecaudo">Consultar Recaudo</string>
     <string name="btnAjustesInicio">Ajustes</string>
-    <string name="btnHistorialAlertasInicio">Historial Alertas</string>
+    <string name="btnEstadoBuses">Estado Buses</string>
     <string name="btnRegresarInicio">Regresar</string>
     <string name="pulsador_on">ON</string>
     <string name="pulsadaor_off">OFF</string>
@@ -23,7 +25,16 @@
     <string name="requisito6">Matricula</string>
     <string name="requisito7">Certificado RTV</string>
     <string name="btn_ok">Aceptar</string>
-
+    <string name="btn_incidencias">Incidencias</string>
+    <string name="btn_Recaudo">Recaudo</string>
+    <string name="btnEstadoBus">Estado Buses</string>
+    <string name="btnGestionBuses">Gestion Unidades</string>
+    <string name="btnCrearBuses">Crear Unidades</string>
+    <string name="btnBuses">Gestion Unidades</string>
+    <string name="nombreBuses">Nombre Unidad</string>
+    <string name="placaBus">Placa Bus</string>
+    <string name="permisoBus">Permiso Municipal</string>
+    <string name="title_activity_editar_bus">Editar Unidad</string>
 
 
 

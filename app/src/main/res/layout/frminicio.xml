@@ -30,32 +30,35 @@
 
 
     </LinearLayout>
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:layout_column="2">
     <TableRow
         android:id="@+id/tableRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dip" >
+
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="83dp"
             android:text="@string/btnNameTimbradoInicio"
             android:id="@+id/button1"
-            android:layout_weight="10"
+            android:layout_weight="0"
             android:onClick="ir"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="83dp"
-            android:text="@string/btnFlujoBusesInicio"
+            android:text="@string/btn_Recaudo"
             android:id="@+id/button2"
             android:layout_weight="10"
-            android:onClick="flujounidades"/>
+            android:onClick="recaudo"/>
     </TableRow>
 
         <TableRow
@@ -67,19 +70,45 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
+
                 android:text="@string/btnHistorialInicio"
                 android:id="@+id/button3"
-                android:layout_weight="10"
-                android:onClick="irUnidad"/>
+                android:layout_weight="0"
+                android:onClick="historialBuses"/>
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
-                android:text="@string/btnHistorialAlertasInicio"
+                android:text="@string/btnEstadoBuses"
                 android:id="@+id/button4"
-                android:layout_weight="10"/>
+                android:layout_weight="10"
+                android:onClick="estadoBuses"/>
         </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dip" >
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btnGestionBuses"
+                android:id="@+id/button7"
+                android:layout_weight="0"
+                android:onClick="gestionUnidades"/>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btn_incidencias"
+                android:id="@+id/button8"
+                android:layout_weight="10"/>
+
+        </TableRow>
+
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
@@ -89,8 +118,15 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
-                android:text="@string/btnAjustesInicio"
+                android:text="@string/btn_incidencias"
                 android:id="@+id/button5"
+                android:layout_weight="0"/>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btnAjustesInicio"
+                android:id="@+id/button6"
                 android:layout_weight="10"/>
 
         </TableRow>

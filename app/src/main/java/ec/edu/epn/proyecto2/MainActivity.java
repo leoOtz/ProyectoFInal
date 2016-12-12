@@ -22,15 +22,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void flujounidades(View view){
-        Intent flujo = new Intent(this,flujo.class);
-        startActivity(flujo);
+    public void recaudo(View view){
+        Intent recaudo = new Intent(this,Recaudo.class);
+        startActivity(recaudo);
     }
 
-    public void irUnidad(View View){
-        Intent irUnidad = new Intent(this,crearbus.class);
-        startActivity(irUnidad);
+    public void historialBuses(View View){
+        Intent historialBuses = new Intent(this,HistorialBuses.class);
+        startActivity(historialBuses);
     }
+    public void estadoBuses(View View){
+        Intent estado = new Intent(this,estadobuses.class);
+        startActivity(estado);
+    }
+    public void gestionUnidades(View View){
+        Intent gestionUnidades = new Intent(this,GestionUnidades.class);
+        startActivity(gestionUnidades);
+    }
+
 
 
 

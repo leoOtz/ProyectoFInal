@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_crearbus"
+    android:id="@+id/activity_editar_bus"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ec.edu.epn.proyecto2.crearbus">
+    tools:context="ec.edu.epn.proyecto2.EditarBus">
 
     <TextView
         android:layout_marginTop="@dimen/margen2"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/unidad"
         android:textSize="@dimen/titulo1"
-        android:text="@string/btnCrearBuses"
+        android:text="@string/title_activity_editar_bus"
         android:textAlignment="center"
         android:textColor="@color/colorAzulObscuro"/>
 
@@ -76,7 +76,7 @@
         android:text="GUARDAR"
         android:onClick="guardar"
         android:layout_gravity="center"
-            />
+        />
 
 
 </LinearLayout>

@@ -3,13 +3,14 @@
     package="ec.edu.epn.proyecto2">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estadobuses">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,15 +24,16 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <activity android:name=".mapa2" />
         <activity android:name=".flujo" />
         <activity android:name=".crearbus" />
-        <activity android:name=".mapa_fiscalizador"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".requisitosbus">
-
-        </activity>
+        <activity android:name=".mapa_fiscalizador" />
+        <activity android:name=".estadobuses" />
+        <activity android:name=".requisitosbus" />
+        <activity android:name=".Recaudo" />
+        <activity android:name=".GestionUnidades" />
+        <activity android:name=".HistorialBuses" />
+        <activity android:name=".EditarBus"/>
     </application>
 
 </manifest>

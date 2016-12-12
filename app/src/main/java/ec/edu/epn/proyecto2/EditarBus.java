@@ -50,13 +50,9 @@ public class EditarBus extends AppCompatActivity {
         String criterio;
         String[] valoresCriterio;
 
-        String nombre = txtNombre.toString();
-        String placa = txtPlaca.toString();
-        String permiso = txtPermiso.toString();
-
-
-
-
+        String nombre = txtNombre.getText().toString();
+        String placa = txtPlaca.getText().toString();
+        String permiso = txtPermiso.getText().toString();
         // actualizamos con los nuevos datos, la información cambiada
         registro.put(BusContract.Bus.NOMBRE, nombre);
         registro.put(BusContract.Bus.PLACA, placa);

@@ -59,7 +59,7 @@ public class HistorialBuses extends AppCompatActivity {
                     c.getString(0));
         }
 
-        BusAdapter2 ba = new BusAdapter2(this, datos);
+        BusAdapter ba = new BusAdapter(this, datos);
         lvUnidades.setAdapter(ba);
     }
 }

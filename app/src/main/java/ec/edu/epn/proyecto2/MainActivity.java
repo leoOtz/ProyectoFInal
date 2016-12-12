@@ -40,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(gestionUnidades);
     }
 
-
+    public void ajustes (View View)
+    {
+        Intent a = new Intent(this, ajustes.class);
+        startActivity(a);
+    }
 
 
 

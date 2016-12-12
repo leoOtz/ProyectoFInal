@@ -127,7 +127,9 @@
                 android:layout_height="83dp"
                 android:text="@string/btnAjustesInicio"
                 android:id="@+id/button6"
-                android:layout_weight="10"/>
+                android:layout_weight="10"
+                android:onClick="ajustes"
+                />
 
         </TableRow>
     </TableLayout>

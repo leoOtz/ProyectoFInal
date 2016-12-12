@@ -33,7 +33,7 @@ public class GestionUnidades extends AppCompatActivity {
                 Bus bus = datos[posicion];
                 Toast.makeText(GestionUnidades.this,"Bus: " +
                         bus.getNombre(),Toast.LENGTH_LONG).show();
-                Intent i = new Intent(GestionUnidades.this,EditarBus.class);
+                Intent i = new Intent(GestionUnidades.this,IntermedioGestion.class);
                 i.putExtra("bus", bus);
                 startActivity(i);
             }
@@ -67,5 +67,11 @@ public class GestionUnidades extends AppCompatActivity {
     public void abrirCrearBus (View v) {
         Intent i = new Intent(this,crearbus.class);
         startActivity(i);
+    }
+    public void inicio(View view)
+    {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
     }
 }

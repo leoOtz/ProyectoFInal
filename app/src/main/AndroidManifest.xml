@@ -24,6 +24,7 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity android:name=".mapa2" />
         <activity android:name=".flujo" />
         <activity android:name=".crearbus" />
@@ -33,7 +34,9 @@
         <activity android:name=".Recaudo" />
         <activity android:name=".GestionUnidades" />
         <activity android:name=".HistorialBuses" />
-        <activity android:name=".EditarBus"/>
+        <activity android:name=".EditarBus" />
+        <activity android:name=".IntermedioGestion"/>
+        <activity android:name=".ajustes"/>
     </application>
 
 </manifest>

@@ -27,7 +27,7 @@ public class estadobuses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gestion_unidades);
+        setContentView(R.layout.activity_estadobuses);
 
         lvUnidades = (ListView)findViewById(R.id.lvUnidades);
         lvUnidades.setOnItemClickListener(new AdapterView.OnItemClickListener() {

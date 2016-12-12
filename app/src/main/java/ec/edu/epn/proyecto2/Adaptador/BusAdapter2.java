@@ -34,8 +34,7 @@ public class BusAdapter2  extends ArrayAdapter
             LayoutInflater li = LayoutInflater.from(getContext());
             convertView = li.inflate(R.layout.lv_bus_item_2,null);
         }
-        Switch sw =(Switch) convertView.findViewById(
-                R.id.BtnSwitch);
+     //   Switch sw =(Switch) convertView.findViewById(                R.id.BtnSwitch);
         ImageView iv = (ImageView)convertView.findViewById(
                 R.id.imageView);
         TextView tv = (TextView)convertView.findViewById(

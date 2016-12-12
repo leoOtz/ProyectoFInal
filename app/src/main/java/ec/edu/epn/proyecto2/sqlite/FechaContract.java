@@ -12,7 +12,7 @@ public class FechaContract
     {
         public final static String NOMBRE_TABLA="FECHA";
         public final static String FECHA_SALIDA="FECHA_SALIDA";
-        public final static String FECHA_LLEGADA="FECH_LLEGADA";
+        public final static String FECHA_LLEGADA="FECHAK_LLEGADA";
         public final static String INFO_BUS="INFO_BUS";
 
     }

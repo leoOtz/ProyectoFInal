@@ -20,6 +20,7 @@ public class SubMenuHistorial extends AppCompatActivity {
 
     private ListView lvfecha;
     private Fecha datos[];
+    private Bus u;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class SubMenuHistorial extends AppCompatActivity {
 
             }
         });
+        u = (Bus)getIntent().getSerializableExtra("bus");
     }
     public void onResume(){
         super.onResume();
@@ -53,9 +55,10 @@ public class SubMenuHistorial extends AppCompatActivity {
         AdaptadorFecha ba = new AdaptadorFecha(this,datos);
         lvfecha.setAdapter(ba);
     }
-    public void inicio(View view)
+    public void CrearHistorico(View view)
     {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, CrearHistorico.class);
+        i.putExtra("bus",u);
         startActivity(i);
 
     }

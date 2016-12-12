@@ -30,7 +30,7 @@ public class HistorialBuses extends AppCompatActivity {
                 Bus bus = datos[posicion];
                 Toast.makeText(HistorialBuses.this,"Bus: " +
                         bus.getNombre(),Toast.LENGTH_LONG).show();
-                Intent i = new Intent(HistorialBuses.this,EditarBus.class);
+                Intent i = new Intent(HistorialBuses.this,SubMenuHistorial.class);
                 i.putExtra("bus", bus);
                 startActivity(i);
             }

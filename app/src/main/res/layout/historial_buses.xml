@@ -19,10 +19,7 @@
         android:layout_gravity="center"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:textColor="@color/colorAzulObscuro"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
     <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -36,17 +33,8 @@
     android:paddingTop="10dp"
     />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:onClick="irHora"
-        android:text="@string/btnIngresarHistorico"
-        android:drawableLeft="@drawable/img_reloj"
-        android:layout_marginLeft="@dimen/margen1"
-        android:layout_marginRight="@dimen/margen1"
-        />
-    </LinearLayout>
+
+    
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

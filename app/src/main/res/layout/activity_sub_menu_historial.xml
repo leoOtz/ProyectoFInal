@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/margen2"
         android:text="@string/btnIngresarHistorico"
         android:textSize="@dimen/btnGrande"
-        android:onClick="eliminar"/>
+        android:onClick="CrearHistorico"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -47,7 +47,7 @@ public class BusAdapter extends ArrayAdapter
         }
         iv.setImageResource(idImg);
         tv.setText(buses[position].getNombre());
-        pl.setText(buses[position].getPlaca());
+        pl.setText("Placa: "+buses[position].getPlaca());
 
         return convertView;
     }

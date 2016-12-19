@@ -9,9 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import ec.edu.epn.proyecto2.Objetos.Bus;
-import ec.edu.epn.proyecto2.Objetos.Fecha;
+import ec.edu.epn.proyecto2.sqlite.BusOH;
 import ec.edu.epn.proyecto2.sqlite.FechaContract;
-import ec.edu.epn.proyecto2.sqlite.FechaOH;
 
 public class CrearHistorico extends AppCompatActivity {
 
@@ -28,7 +27,7 @@ public class CrearHistorico extends AppCompatActivity {
     }
     public void guardar(View v)
     {
-        FechaOH foh = new FechaOH(getApplicationContext());
+        BusOH foh = new BusOH(getApplicationContext());
         SQLiteDatabase sdb = foh.getWritableDatabase();
         ContentValues datos = new ContentValues();
         datos.put(FechaContract.Fecha.FECHA_LLEGADA,
@@ -45,6 +44,7 @@ public class CrearHistorico extends AppCompatActivity {
         sdb.close();
 
         Intent i = new Intent (this, SubMenuHistorial.class);
+        i.putExtra("bus",u);
         startActivity(i);
 
     }

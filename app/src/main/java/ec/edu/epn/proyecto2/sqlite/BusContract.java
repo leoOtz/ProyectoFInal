@@ -24,4 +24,7 @@ public class BusContract
                     Bus.NOMBRE + " TEXT,"+
                     Bus.PLACA + " TEXT,"+
                     Bus.PERMISO + " TEXT)";
+
+    public static final String SQL_DELETE_ENTRIES =
+            "DROP TABLE IF EXISTS " + Bus.NOMBRE_TABLA;
 }

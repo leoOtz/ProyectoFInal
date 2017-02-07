@@ -10,4 +10,5 @@
     <dimen name="margen4">40dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="tama_50">50dp</dimen>
+    <dimen name="tam_60">60dp</dimen>
 </resources>

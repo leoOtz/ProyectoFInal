@@ -9,4 +9,5 @@
     <dimen name="margen3">30dp</dimen>
     <dimen name="margen4">40dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tama_50">50dp</dimen>
 </resources>

@@ -11,11 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -38,7 +33,15 @@
         <activity android:name=".IntermedioGestion" />
         <activity android:name=".ajustes" />
         <activity android:name=".SubMenuHistorial" />
-        <activity android:name=".CrearHistorico"></activity>
+        <activity android:name=".CrearHistorico" />
+        <activity android:name=".PantallaCarga"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

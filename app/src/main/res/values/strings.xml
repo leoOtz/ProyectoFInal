@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProyectoFinal</string>
+    <string name="app_name">CADSO BUS</string>
     <string name="frmInicioObjetivos">Optimizar el tiempo de timbrado(o como sea que se diga) de los buses de la cooperativa San Francisco reducirá los costos operativos</string>
     <string name="frmInicio">Inicio</string>
     <string name="btnNameTimbradoInicio">Mapa Timbrado</string>

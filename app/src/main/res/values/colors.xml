@@ -5,4 +5,11 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorRosa">#C800B5</color>
     <color name="colorAzulObscuro">#0a7e8c </color>
+    <color name="colorAzulGris">#263238</color>
+    <color name="colorCafeMedio">#795548</color>
+    <color name="colorVerdeBrilloso">#76FF03</color>
+    <color name="colorIndigoClaro">#9FA8DA</color>
+    <color name="colorMoradoObscuro">#311B92</color>
+    <color name="colorPurpuraClaro">#AA00FF</color>
+    <color name="colorTea">#00695C</color>
 </resources>

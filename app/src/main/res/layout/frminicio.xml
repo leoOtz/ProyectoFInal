@@ -3,7 +3,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorAzulObscuro">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -17,9 +18,11 @@
             android:layout_height="match_parent"
             android:id="@+id/textView3"
             android:layout_weight="1"
-            android:textSize="18sp"
+            android:textSize="30sp"
+            android:textColor="@color/colorAccent"
             android:textAlignment="center"
-            android:background="@color/colorAzulObscuro"/>
+            android:background="@color/colorAzulObscuro"
+            />
 
         <view
             android:layout_width="10dp"
@@ -35,43 +38,59 @@
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_column="2">
-    <TableRow
-        android:id="@+id/tableRow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dip" >
+        android:layout_column="2"
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:text="@string/btnNameTimbradoInicio"
-            android:id="@+id/button1"
-            android:layout_weight="0"
-            android:onClick="ir"/>
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:text="@string/btn_Recaudo"
-            android:id="@+id/button2"
-            android:layout_weight="10"
-            android:onClick="recaudo"/>
-    </TableRow>
+        >
 
         <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dip" >
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dip"
+            android:layout_marginLeft="@dimen/margen1"
+            >
+
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
+                android:text="@string/btnNameTimbradoInicio"
+                android:id="@+id/button1"
+                android:layout_weight="0"
+                android:onClick="ir"
+                android:background="@color/colorIndigoClaro"
+                android:layout_marginRight="@dimen/margen2"
 
+                />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="@string/btn_Recaudo"
+                android:id="@+id/button2"
+                android:layout_weight="10"
+                android:background="@color/colorIndigoClaro"
+                android:onClick="recaudo"
+
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dip"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margen1">
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:background="@color/colorIndigoClaro"
+                android:layout_marginRight="@dimen/margen1"
                 android:text="@string/btnHistorialInicio"
+                android:ems="5"
                 android:id="@+id/button3"
                 android:layout_weight="0"
                 android:onClick="historialBuses"/>
@@ -82,6 +101,7 @@
                 android:layout_height="83dp"
                 android:text="@string/btnEstadoBuses"
                 android:id="@+id/button4"
+                android:background="@color/colorIndigoClaro"
                 android:layout_weight="10"
                 android:onClick="estadoBuses"/>
         </TableRow>
@@ -90,12 +110,15 @@
             android:id="@+id/tableRow3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="15dip" >
+            android:padding="15dip"
+            android:layout_marginLeft="@dimen/margen1">
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
                 android:text="@string/btnGestionBuses"
+                android:background="@color/colorIndigoClaro"
+                android:layout_marginRight="@dimen/btnGrande"
                 android:id="@+id/button7"
                 android:layout_weight="0"
                 android:onClick="gestionUnidades"/>
@@ -105,6 +128,7 @@
                 android:layout_height="83dp"
                 android:text="@string/btn_incidencias"
                 android:id="@+id/button8"
+                android:background="@color/colorIndigoClaro"
                 android:layout_weight="10"/>
 
         </TableRow>
@@ -113,14 +137,18 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dip" >
+            android:padding="15dip"
+            android:layout_marginLeft="@dimen/margen1">
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
                 android:text="@string/btn_incidencias"
+                android:background="@color/colorIndigoClaro"
+                android:layout_marginRight="@dimen/btnGrande"
                 android:id="@+id/button5"
                 android:layout_weight="0"/>
+
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
@@ -129,6 +157,7 @@
                 android:id="@+id/button6"
                 android:layout_weight="10"
                 android:onClick="ajustes"
+                android:background="@color/colorIndigoClaro"
                 />
 
         </TableRow>

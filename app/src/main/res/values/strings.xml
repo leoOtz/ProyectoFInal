@@ -7,7 +7,7 @@
     <string name="btnHistorialInicio">Historial Ciclo Buses</string>
     <string name="btnIngresarRecaudo">Ingresar Recaudo</string>
     <string name="btnConsultarRecaudo">Consultar Recaudo</string>
-    <string name="btnAjustesInicio">Ajustes</string>
+    <string name="btnAjustesInicio">Preferencias</string>
     <string name="btnEstadoBuses">Estado Buses</string>
     <string name="btnRegresarInicio">Regresar</string>
     <string name="pulsador_on">ON</string>
@@ -41,5 +41,10 @@
     <string name="btnEliminarHistorico">Eliminar Historico</string>
     <string name="Fecha_horaSalida">Hora Salida</string>
     <string name="Fecha_horaLLegada">Hora llegada</string>
+    <string name="titulo_notificacion">Notificacion</string>
+    <string name="titulo_sonido">Sonido</string>
+    <string name="titulo_led">Color Led</string>
+    <string name="titulo_flash">Flash</string>
+    <string name="btn_guardar">Guardar</string>
 </resources>
 

@@ -67,7 +67,7 @@ public class crearbus extends AppCompatActivity {
         @Override
         protected String doInBackground(Bus... Buses) {
             final String url = DireccionIP.ip+"SrvBus/crearBus?" +
-                            "&nombre={n}&permiso={e}" +
+                            "nombre={n}&permiso={e}" +
                             "&placa={cl}&nombreImagen={ni}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().

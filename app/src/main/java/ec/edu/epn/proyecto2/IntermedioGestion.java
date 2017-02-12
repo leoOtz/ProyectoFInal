@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import ec.edu.epn.proyecto2.Objetos.Bus;
@@ -26,6 +27,7 @@ public class IntermedioGestion extends AppCompatActivity {
     {
         Intent i = new Intent(this, EditarBus.class);
         i.putExtra("bus", u);
+        Log.v("bus", u.getPlaca());
         startActivity(i);
     }
     public void eliminar(View view)

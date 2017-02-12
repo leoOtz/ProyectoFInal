@@ -3,6 +3,7 @@ package ec.edu.epn.proyecto2;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,9 +12,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
+import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
 
 import ec.edu.epn.proyecto2.Adaptador.BusAdapter;
 import ec.edu.epn.proyecto2.Objetos.Bus;
+import ec.edu.epn.proyecto2.Utilitarios.DireccionIP;
 import ec.edu.epn.proyecto2.sqlite.BusContract;
 import ec.edu.epn.proyecto2.sqlite.BusOH;
 
@@ -39,8 +44,10 @@ public class GestionUnidades extends AppCompatActivity {
             }
         });
     }
-    public void onResume(){
+    public void onResume()
+    {
         super.onResume();
+        /*
         BusOH aoh = new BusOH(getApplicationContext());
         SQLiteDatabase sdb = aoh.getReadableDatabase();
         Cursor c = sdb.query(BusContract.Bus.NOMBRE_TABLA,
@@ -60,9 +67,10 @@ public class GestionUnidades extends AppCompatActivity {
                     c.getString(2),
                     c.getString(0));
         }
+        */
+        ConsultarBuses cB= new ConsultarBuses();
+        cB.execute();
 
-        BusAdapter ba = new BusAdapter(this,datos);
-        lvUnidades.setAdapter(ba);
     }
     public void abrirCrearBus (View v) {
         Intent i = new Intent(this,crearbus.class);
@@ -73,5 +81,24 @@ public class GestionUnidades extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
 
+    }
+    public class ConsultarBuses extends AsyncTask<Void,Void,Bus[]>
+    {
+        @Override
+        protected Bus[] doInBackground(Void... Void) {
+            final String url = DireccionIP.ip+"SrvBus/consultarBuses";
+            RestTemplate restTemplate = new RestTemplate();
+            restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+            Bus [] r= restTemplate.getForObject(url,Bus[].class);
+            return r;
+        }
+        @Override
+        protected void onPostExecute(Bus[] b) {
+            super.onPostExecute(b);
+            datos =b;
+            BusAdapter ba = new BusAdapter(GestionUnidades.this,datos);
+            lvUnidades.setAdapter(ba);
+          //  Toast.makeText(GestionUnidades.this, s, Toast.LENGTH_LONG).show();
+        }
     }
 }

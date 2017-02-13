@@ -32,6 +32,7 @@ public class crearbus extends AppCompatActivity {
     public void guardar(View v)
     {
         //Inserción con SQLite
+        /*
         BusOH boh = new BusOH(getApplicationContext());
         SQLiteDatabase sdb = boh.getWritableDatabase();
 
@@ -50,6 +51,7 @@ public class crearbus extends AppCompatActivity {
                 null,
                 datos);
         sdb.close();
+         */
         Bus b = new Bus();
         b.setNombre(txtNombre.getText().toString());
         b.setPlaca(txtPlaca.getText().toString());
@@ -68,7 +70,7 @@ public class crearbus extends AppCompatActivity {
         protected String doInBackground(Bus... Buses) {
             final String url = DireccionIP.ip+"SrvBus/crearBus?" +
                             "nombre={n}&permiso={e}" +
-                            "&placa={cl}&nombreImagen={ni}";
+                            "&placa={cl}&nombreImg={ni}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().
                     add(new StringHttpMessageConverter());

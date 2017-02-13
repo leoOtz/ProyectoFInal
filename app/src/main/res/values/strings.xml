@@ -38,8 +38,13 @@
     <string name="tittleSubmenu">Que desea realizar</string>
     <string name="lbl_eliminar">eliminar</string>
     <string name="btnIngresarHistorico">Ingresar Historico</string>
-    <string name="btnEliminarHistorico">Eliminar Historico</string>
-    <string name="Fecha_horaSalida">Hora Salida</string>
-    <string name="Fecha_horaLLegada">Hora llegada</string>
+    <string name="btnEditarHistorico">Editar Historico</string>
+    <string name="btnEliminarHistorico">Eliminar Historico </string>
+    <string name="Fecha_horaSalida">Hora Salida </string>
+    <string name="Fecha_horaLLegada">Hora llegada </string>
+    <string name="fecha">Fecha </string>
+    <string name="selec">Seleccionar Unidad</string>
+    <string name="elRe">Eliminar Recaudo</string>
+    <string name="editRe">Editar Recaudo</string>
 </resources>
 

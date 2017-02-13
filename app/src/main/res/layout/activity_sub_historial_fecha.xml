@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/racaudo_1"
+    android:id="@+id/activity_sub_historial_fecha"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ec.edu.epn.proyecto2.Recaudo"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context="ec.edu.epn.proyecto2.SubHistorialFecha">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margen4"
+        android:layout_marginTop="@dimen/margen1"
         android:textSize="@dimen/titulo1"
         android:textAlignment="center"
-        android:text="@string/btn_Recaudo"/>
+        android:text="@string/tittleSubmenu"
+        android:textColor="@color/colorAzulObscuro"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tam_60"
+        android:layout_marginTop="100dp"
         android:textSize="@dimen/btnGrande"
-        android:text="@string/editRe"
-        android:onClick="editarRecaudo"/>
+        android:text="@string/btnEditarHistorico"
+        android:onClick="editarHistorico"
+        android:id="@+id/button9" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/elRe"
-        android:onClick="eliminarRecaudo"
-        android:textSize="@dimen/btnGrande"/>
+        android:text="@string/btnEliminarHistorico"
+        android:textSize="@dimen/btnGrande"
+        android:onClick="eliminar"/>
 
 </LinearLayout>

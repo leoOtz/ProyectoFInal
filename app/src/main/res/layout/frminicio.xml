@@ -19,7 +19,7 @@
             android:id="@+id/textView3"
             android:layout_weight="1"
             android:textSize="30sp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorNegro"
             android:textAlignment="center"
             android:background="@color/colorAzulObscuro"
             />

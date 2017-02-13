@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtfecha1"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="datetime"
         />
 
     <TextView

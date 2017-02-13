@@ -19,17 +19,21 @@ import ec.edu.epn.proyecto2.Utilitarios.DireccionIP;
 import ec.edu.epn.proyecto2.sqlite.BusOH;
 import ec.edu.epn.proyecto2.sqlite.FechaContract;
 
-public class CrearHistorico extends AppCompatActivity {
+public class EditatHistorico extends AppCompatActivity {
 
     EditText fecha1,fecha2;
     Bus u;
+    Fecha f;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crear_historico);
+        setContentView(R.layout.activity_editat_historico);
         fecha1 = (EditText) findViewById(R.id.txtfecha1);
         fecha2 = (EditText)findViewById(R.id.txtfecha2);
         u =(Bus) getIntent().getSerializableExtra("bus");
+        f = (Fecha) getIntent().getSerializableExtra("fecha");
+        fecha1.setText(f.getHoraSalida());
+        fecha2.setText(f.getHoraLlegada());
 
     }
     public void guardar(View v)
@@ -50,39 +54,45 @@ public class CrearHistorico extends AppCompatActivity {
                 null,
                 datos);
         sdb.close();
-        */
-        Fecha fN = new Fecha();
-        fN.setHoraLlegada(fecha2.getText().toString());
-        fN.setHoraSalida(fecha1.getText().toString());
-        GuardarRest gF= new GuardarRest();
-        gF.execute(fN);
+
         Intent i = new Intent (this, SubMenuHistorial.class);
         i.putExtra("bus",u);
         startActivity(i);
-
+        */
+        EditarHis eH = new EditarHis();
+        Fecha fA= new Fecha();
+        fA.setHoraSalida(fecha1.getText().toString());
+        fA.setHoraLlegada(fecha2.getText().toString());
+        eH.execute(fA);
+        Intent i = new Intent (this, SubMenuHistorial.class);
+        i.putExtra("bus",u);
+        startActivity(i);
     }
-    public class GuardarRest extends AsyncTask<Fecha,Void,String>
+
+    //Meotod RES actualizar
+    public class EditarHis extends AsyncTask<Fecha,Void,String>
     {
         @Override
-        protected String doInBackground(Fecha... fechas) {
-            final String url = DireccionIP.ip+"SrvFecha/crearFecha?" +
-                    "fecha1={fS}&fecha2={fL}" +
-                    "&infoBus={plca}";
+        protected String doInBackground(Fecha... Fechas) {
+            final String url = DireccionIP.ip+"SrvFecha/editarFecha?" +
+                    "fecha1={f1}&fecha2={f2}" +
+                    "&info={plca}" +
+                    "&fecha1N={f1N}&fecha2N={f2N}";
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.getMessageConverters().
-                    add(new StringHttpMessageConverter());
-            Fecha f = fechas[0];
+            restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+            Fecha fN = Fechas[0];
             String r = restTemplate.getForObject(url,String.class,
                     f.getHoraSalida(),
                     f.getHoraLlegada(),
-                    u.getPlaca()
-                    );
+                    u.getPlaca(),
+                    fN.getHoraSalida(),
+                    fN.getHoraLlegada());
             return r;
         }
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            Toast.makeText(CrearHistorico.this, s, Toast.LENGTH_LONG).show();
+            Toast.makeText(EditatHistorico.this, s, Toast.LENGTH_LONG).show();
         }
     }
 }

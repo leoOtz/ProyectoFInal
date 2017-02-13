@@ -139,7 +139,6 @@
         android:paddingBottom="20dp"
         android:paddingTop="20dp"
         android:textSize="18sp"
-        android:drawableLeft="@drawable/img_preferencias"
         android:onClick="guardar"/>
 
 

@@ -46,5 +46,11 @@
     <string name="titulo_led">Color Led</string>
     <string name="titulo_flash">Flash</string>
     <string name="btn_guardar">Guardar</string>
+    <string name="titulo_plumas">Estado Plumas</string>
+    <string name="titulo_licencia">Licencia</string>
+    <string name="titulo_llantas">Estado Neumaticos</string>
+    <string name="titulo_luces">Luces</string>
+    <string name="titulo_matricula">Matricula</string>
+    <string name="titulo_rtv">Certificado Revision Vehicular</string>
 </resources>
 

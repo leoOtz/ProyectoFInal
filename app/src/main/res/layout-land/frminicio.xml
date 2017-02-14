@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
@@ -38,7 +42,7 @@
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_column="2"
+        android:layout_column="3"
 
         >
 
@@ -54,9 +58,20 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
+                android:text="@string/btnEstadoBuses"
+                android:id="@+id/button4"
+                android:background="@color/colorIndigoClaro"
+                android:layout_weight="10"
+                android:onClick="estadoBuses"
+                android:layout_marginRight="@dimen/margen2"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
                 android:text="@string/btnNameTimbradoInicio"
                 android:id="@+id/button1"
-                android:layout_weight="0"
+                android:layout_weight="10"
                 android:onClick="ir"
                 android:background="@color/colorIndigoClaro"
                 android:layout_marginRight="@dimen/margen2"
@@ -69,11 +84,22 @@
                 android:layout_height="83dp"
                 android:text="@string/btn_Recaudo"
                 android:id="@+id/button2"
-                android:layout_weight="10"
                 android:background="@color/colorIndigoClaro"
                 android:onClick="recaudo"
-
+                android:layout_weight="10"
+                android:layout_marginRight="@dimen/margen2"
                 />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:background="@color/colorIndigoClaro"
+                android:layout_marginRight="@dimen/margen2"
+                android:text="@string/btnHistorialInicio"
+                android:id="@+id/button3"
+                android:layout_weight="0"
+
+                android:onClick="historialBuses"/>
         </TableRow>
 
         <TableRow
@@ -83,35 +109,8 @@
             android:padding="10dip"
             android:gravity="center"
             android:layout_marginLeft="@dimen/margen1">
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="83dp"
-                android:background="@color/colorIndigoClaro"
-                android:layout_marginRight="@dimen/margen1"
-                android:text="@string/btnHistorialInicio"
-                android:ems="5"
-                android:id="@+id/button3"
-                android:layout_weight="0"
-                android:onClick="historialBuses"/>
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="83dp"
-                android:text="@string/btnEstadoBuses"
-                android:id="@+id/button4"
-                android:background="@color/colorIndigoClaro"
-                android:layout_weight="10"
-                android:onClick="estadoBuses"/>
-        </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="15dip"
-            android:layout_marginLeft="@dimen/margen1">
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
@@ -120,18 +119,11 @@
                 android:background="@color/colorIndigoClaro"
                 android:layout_marginRight="@dimen/btnGrande"
                 android:id="@+id/button7"
-                android:layout_weight="0"
+                android:layout_weight="10"
                 android:onClick="gestionUnidades"/>
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="83dp"
-                android:text="@string/btn_incidencias"
-                android:id="@+id/button8"
-                android:background="@color/colorIndigoClaro"
-                android:layout_weight="10"/>
 
         </TableRow>
+
 
         <TableRow
             android:id="@+id/tableRow2"
@@ -139,28 +131,22 @@
             android:layout_height="wrap_content"
             android:padding="15dip"
             android:layout_marginLeft="@dimen/margen1">
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="83dp"
-                android:text="@string/btn_incidencias"
-                android:background="@color/colorIndigoClaro"
-                android:layout_marginRight="@dimen/btnGrande"
-                android:id="@+id/button5"
-                android:layout_weight="0"/>
+
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/img_preferencias"
                 android:layout_height="83dp"
                 android:text="@string/btnAjustesInicio"
                 android:id="@+id/button6"
                 android:layout_weight="10"
                 android:onClick="ajustes"
                 android:background="@color/colorIndigoClaro"
-                android:drawableLeft="@drawable/img_preferencias"
                 />
 
         </TableRow>
+
     </TableLayout>
 </LinearLayout>
+</ScrollView>

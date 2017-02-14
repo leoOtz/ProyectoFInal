@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    android:id="@+id/activity_requisitosbuses"
-    >
-
-    <LinearLayout
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/requisitos_bus"
-        android:textSize="@dimen/titulo1"
-        android:textColor="@color/colorAzulObscuro"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:id="@+id/activity_requisitosbuses"
+        >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/frmInicio"
-        android:drawableLeft="@drawable/img_inicio"
-        android:ems="10"
-        android:onClick="inicio"/>
+        <LinearLayout
 
-</LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_licencia"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
-
-    <Spinner
-        android:id="@+id/cmblicencia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_matricula"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/requisitos_bus"
+                android:textSize="@dimen/titulo1"
+                android:textColor="@color/colorAzulObscuro"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"/>
 
-    <Spinner
-        android:id="@+id/cmbmatricula"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frmInicio"
+                android:drawableLeft="@drawable/img_inicio"
+                android:ems="10"
+                android:onClick="inicio"/>
 
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_llantas"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_licencia"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
 
-    <Spinner
-        android:id="@+id/cmbllantas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_luces"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
-
-    <Spinner
-        android:id="@+id/cmbluces"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+        <Spinner
+            android:id="@+id/cmblicencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_matricula"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbmatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_plumas"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_llantas"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
 
-    <Spinner
-        android:id="@+id/cmbplumas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+        <Spinner
+            android:id="@+id/cmbllantas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_luces"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_rtv"
-        android:textSize="15sp"
-        android:layout_gravity="left"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
-
-    <Spinner
-        android:id="@+id/cmbrtv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_guardar"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp"
-        android:textSize="18sp"
-        android:onClick="guardar"/>
+        <Spinner
+            android:id="@+id/cmbluces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
 
 
 
-</LinearLayout>
-    </ScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_plumas"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbplumas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_rtv"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbrtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_guardar"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:textSize="18sp"
+            android:onClick="guardar"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
+

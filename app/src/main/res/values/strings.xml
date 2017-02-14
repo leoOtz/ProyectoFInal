@@ -1,28 +1,28 @@
 <resources>
-    <string name="app_name">ProyectoFinal</string>
-    <string name="frmInicioObjetivos">Optimizar el tiempo de timbrado(o como sea que se diga) de los buses de la cooperativa San Francisco reducirá los costos operativos</string>
+    <string name="app_name">CADSO BUS</string>
+    <string name="frmInicioObjetivos" translatable="false">Optimizar el tiempo de timbrado(o como sea que se diga) de los buses de la cooperativa San Francisco reducirá los costos operativos</string>
     <string name="frmInicio">Inicio</string>
     <string name="btnNameTimbradoInicio">Mapa Timbrado</string>
     <string name="btnFlujoBusesInicio">Flujo Unidades</string>
     <string name="btnHistorialInicio">Historial Ciclo Buses</string>
     <string name="btnIngresarRecaudo">Ingresar Recaudo</string>
     <string name="btnConsultarRecaudo">Consultar Recaudo</string>
-    <string name="btnAjustesInicio">Preferencias</string>
+    <string name="btnAjustesInicio">Ajustes</string>
     <string name="btnEstadoBuses">Estado Buses</string>
     <string name="btnRegresarInicio">Regresar</string>
-    <string name="pulsador_on">ON</string>
-    <string name="pulsadaor_off">OFF</string>
+    <string name="pulsador_on" translatable="false">ON</string>
+    <string name="pulsadaor_off" translatable="false">OFF</string>
     <string name="estado_bus">ESTADO DE BUSES</string>
-    <string name="btn_bus1">BUS 123</string>
-    <string name="btn_bus2">BUS 456</string>
-    <string name="btn_bus3">BUS 789</string>
+    <string name="btn_bus1" translatable="false">BUS 123</string>
+    <string name="btn_bus2" translatable="false">BUS 456</string>
+    <string name="btn_bus3" translatable="false">BUS 789</string>
     <string name="requisitos_bus">REQUISITO BUS</string>
     <string name="requisito1">Llantas</string>
-    <string name="requisito2">Alcoholemia</string>
+    <string name="requisito2" translatable="false">Alcoholemia</string>
     <string name="requisito3">Luces</string>
     <string name="requisito4">Plumas</string>
     <string name="requisito5">Licencia</string>
-    <string name="requisito6">Matricula</string>
+    <string name="requisito6" translatable="false">Matricula</string>
     <string name="requisito7">Certificado RTV</string>
     <string name="btn_ok">Aceptar</string>
     <string name="btn_incidencias">Incidencias</string>
@@ -38,19 +38,26 @@
     <string name="tittleSubmenu">Que desea realizar</string>
     <string name="lbl_eliminar">eliminar</string>
     <string name="btnIngresarHistorico">Ingresar Historico</string>
-    <string name="btnEliminarHistorico">Eliminar Historico</string>
-    <string name="Fecha_horaSalida">Hora Salida</string>
-    <string name="Fecha_horaLLegada">Hora llegada</string>
+    <string name="btnEditarHistorico">Editar Historico</string>
+    <string name="btnEliminarHistorico">Eliminar Historico </string>
+    <string name="Fecha_horaSalida">Hora Salida </string>
+    <string name="Fecha_horaLLegada">Hora llegada </string>
+    <string name="fecha">Fecha </string>
+    <string name="selec">Seleccionar Unidad</string>
+    <string name="elRe">Eliminar Recaudo</string>
+    <string name="editRe">Editar Recaudo</string>
     <string name="titulo_notificacion">Notificacion</string>
     <string name="titulo_sonido">Sonido</string>
     <string name="titulo_led">Color Led</string>
-    <string name="titulo_flash">Flash</string>
+    <string name="titulo_flash" translatable="false">Flash</string>
     <string name="btn_guardar">Guardar</string>
     <string name="titulo_plumas">Estado Plumas</string>
     <string name="titulo_licencia">Licencia</string>
     <string name="titulo_llantas">Estado Neumaticos</string>
     <string name="titulo_luces">Luces</string>
-    <string name="titulo_matricula">Matricula</string>
+    <string name="titulo_matricula" translatable="false">Matricula</string>
     <string name="titulo_rtv">Certificado Revision Vehicular</string>
 </resources>
+
+
 

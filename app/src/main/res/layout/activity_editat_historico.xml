@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_crearbus"
+    android:id="@+id/activity_editat_historico"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ec.edu.epn.proyecto2.crearbus">
+    android:orientation="vertical"
+    tools:context="ec.edu.epn.proyecto2.EditatHistorico">
 
     <TextView
         android:layout_marginTop="@dimen/margen2"
@@ -17,55 +17,39 @@
         android:layout_height="wrap_content"
         android:id="@+id/unidad"
         android:textSize="@dimen/titulo1"
-        android:text="@string/btnCrearBuses"
+        android:text="@string/btnEditarHistorico"
         android:textAlignment="center"
+        android:layout_marginBottom="@dimen/margen4"
         android:textColor="@color/colorAzulObscuro"/>
-
-
-    <TextView
-        android:layout_marginTop="@dimen/margen3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nombreunidad"
-        android:textSize="@dimen/btnGrande"
-        android:text="@string/nombreBuses"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtnombreUnidad"
-        android:ems="10"
-
-        />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/punidad"
         android:textSize="@dimen/btnGrande"
-        android:text="@string/placaBus"/>
+        android:text="@string/Fecha_horaSalida"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtplacaUnidad"
+        android:id="@+id/txtfecha1"
         android:ems="10"
+        android:inputType="datetime"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/perounidad"
-        android:text="@string/permisoBus"
+        android:text="@string/Fecha_horaLLegada"
         android:textSize="@dimen/btnGrande"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtpermisounidad"
+        android:id="@+id/txtfecha2"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="datetime"
         />
 
     <Button
@@ -76,7 +60,5 @@
         android:text="GUARDAR"
         android:onClick="guardar"
         android:layout_gravity="center"
-            />
-
-
+        />
 </LinearLayout>

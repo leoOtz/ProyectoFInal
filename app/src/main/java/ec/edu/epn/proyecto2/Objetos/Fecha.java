@@ -15,6 +15,9 @@ public class Fecha implements Serializable
         HoraSalida = horaSalida;
         HoraLlegada = horaLlegada;
     }
+    public Fecha ()
+    {
+    }
 
     public String getHoraSalida() {
         return HoraSalida;

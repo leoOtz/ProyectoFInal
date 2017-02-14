@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void recaudo(View view){
-        Intent recaudo = new Intent(this,Recaudo.class);
+        Intent recaudo = new Intent(this,RecaudoInicio.class);
         startActivity(recaudo);
     }
 

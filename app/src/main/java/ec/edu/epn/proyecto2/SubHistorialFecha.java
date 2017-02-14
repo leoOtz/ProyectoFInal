@@ -12,59 +12,60 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import ec.edu.epn.proyecto2.Objetos.Bus;
-import ec.edu.epn.proyecto2.Objetos.RecaudoVo;
+import ec.edu.epn.proyecto2.Objetos.Fecha;
 import ec.edu.epn.proyecto2.Utilitarios.DireccionIP;
 
-public class Recaudo extends AppCompatActivity {
-    private Bus u;
-    private RecaudoVo rO;
+public class SubHistorialFecha extends AppCompatActivity {
 
+    private Bus u;
+    private Fecha f;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.racaudo_1);
+        setContentView(R.layout.activity_sub_historial_fecha);
         u = (Bus)getIntent().getSerializableExtra("bus");
-        rO = (RecaudoVo) getIntent().getSerializableExtra("recaudo");
-       Log.v("recaudo", rO.getFecha());
+        f = (Fecha)getIntent().getSerializableExtra("fecha");
     }
-    public void editarRecaudo(View v)
+    public void editarHistorico(View v)
     {
-        Intent i = new Intent(this, EditarRecaudo.class);
+        Intent i = new Intent(this, EditatHistorico.class);
         i.putExtra("bus", u);
-        i.putExtra("recaudo",rO);
+        i.putExtra("fecha",f);
         Log.v("bus", u.getPlaca());
         startActivity(i);
     }
-    public void eliminarRecaudo(View v)
+    public void eliminar(View v)
     {
-        RecaudoVo rN = rO;
+        Fecha uB = f;
         Log.v("BUS", u.getPlaca());
+        Log.v("Fecha", f.getHoraSalida());
         EliminarRest eB =new EliminarRest();
-        eB.execute(rN);
-        Intent i = new Intent(this, RecaudoSegundo.class);
+        eB.execute(uB);
+        Intent i = new Intent(this, SubMenuHistorial.class);
         i.putExtra("bus", u);
         startActivity(i);
     }
-    public class EliminarRest extends AsyncTask<RecaudoVo,Void,String>
+    public class EliminarRest extends AsyncTask<Fecha,Void,String>
     {
         @Override
-        protected String doInBackground(RecaudoVo... recaudos) {
-            final String url = DireccionIP.ip+"SvrRecaudo/elimarRecaudo?" +
-                    "info={pcla}&fecha={f}";
+        protected String doInBackground(Fecha... fechas) {
+            final String url = DireccionIP.ip+"SrvFecha/elimarfecha?"+
+                    "info={p}&fecha={f}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
-            RecaudoVo rB = recaudos[0];
+            Fecha fB = fechas[0];
             Log.v("bus", u.getPlaca());
             String r = restTemplate.getForObject(url,String.class,
                     u.getPlaca(),
-                    rB.getFecha()
+                    fB.getHoraSalida()
             );
             return r;
         }
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            Toast.makeText(Recaudo.this, s, Toast.LENGTH_LONG).show();
+            Toast.makeText(SubHistorialFecha.this, s, Toast.LENGTH_LONG).show();
         }
     }
+
 }

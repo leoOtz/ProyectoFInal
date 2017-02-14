@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -14,13 +15,13 @@ import org.springframework.web.client.RestTemplate;
 
 import ec.edu.epn.proyecto2.Adaptador.AdaptadorRecaudo;
 import ec.edu.epn.proyecto2.Objetos.Bus;
-import ec.edu.epn.proyecto2.Objetos.Fecha;
+import ec.edu.epn.proyecto2.Objetos.RecaudoVo;
 import ec.edu.epn.proyecto2.Utilitarios.DireccionIP;
 
 public class RecaudoSegundo extends AppCompatActivity {
 
     ListView lvRecaudo;
-    private ec.edu.epn.proyecto2.Objetos.Recaudo  datos[];
+    private RecaudoVo datos[];
     private Bus u;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +30,24 @@ public class RecaudoSegundo extends AppCompatActivity {
         lvRecaudo = (ListView)findViewById(R.id.lvRecaudo);
         u = (Bus)getIntent().getSerializableExtra("bus");
         lvRecaudo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long l) {
-                ec.edu.epn.proyecto2.Objetos.Recaudo recaudo = datos[posicion];
-                Toast.makeText(RecaudoSegundo.this,"fecha: " +u.getNombre(),Toast.LENGTH_LONG).show();
+                public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long l) {
+                RecaudoVo recaudo1 = datos[posicion];
+                    Log.v("recaudo",recaudo1.getFecha());
+                //Toast.makeText(RecaudoSegundo.this,"nombre: " +u.getNombre(),Toast.LENGTH_LONG).show();
                 Intent i = new Intent(RecaudoSegundo.this,Recaudo.class);
                 i.putExtra("bus", u);
-                i.putExtra("recaudo", recaudo);
+                i.putExtra("recaudo", recaudo1);
                 startActivity(i);
             }
         });
+
+    }
+    public void onResume()
+    {
+        super.onResume();
+        ConsultarRecaudo cB= new ConsultarRecaudo();
+        cB.execute();
+
     }
     public void inicio(View view)
     {
@@ -53,19 +62,19 @@ public class RecaudoSegundo extends AppCompatActivity {
         startActivity(i);
 
     }
-    public class ConsultarFecha extends AsyncTask<Void,Void, ec.edu.epn.proyecto2.Objetos.Recaudo[]>
+    public class ConsultarRecaudo extends AsyncTask<Void,Void, RecaudoVo[]>
     {
         @Override
-        protected ec.edu.epn.proyecto2.Objetos.Recaudo[] doInBackground(Void... Void) {
-            final String url = DireccionIP.ip+"SvrRecaudo/Consultar?info=={plca}";
+        protected RecaudoVo[] doInBackground(Void... Void) {
+            final String url = DireccionIP.ip+"SvrRecaudo/Consultar?info={plca}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-            ec.edu.epn.proyecto2.Objetos.Recaudo [] r= restTemplate.getForObject(url,ec.edu.epn.proyecto2.Objetos.Recaudo[].class,
+            RecaudoVo[] r= restTemplate.getForObject(url,RecaudoVo[].class,
                     u.getPlaca());
             return r;
         }
         @Override
-        protected void onPostExecute(ec.edu.epn.proyecto2.Objetos.Recaudo[] r) {
+        protected void onPostExecute(RecaudoVo[] r) {
             super.onPostExecute(r);
             datos =r;
             AdaptadorRecaudo ra = new AdaptadorRecaudo(RecaudoSegundo.this,datos);

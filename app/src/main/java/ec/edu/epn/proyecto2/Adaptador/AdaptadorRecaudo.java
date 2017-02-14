@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import ec.edu.epn.proyecto2.Objetos.Recaudo;
+import ec.edu.epn.proyecto2.Objetos.RecaudoVo;
 import ec.edu.epn.proyecto2.R;
 
 /**
@@ -18,9 +18,9 @@ import ec.edu.epn.proyecto2.R;
 
 public class AdaptadorRecaudo extends ArrayAdapter
 {
-    private Recaudo[] recaudo;
+    private RecaudoVo[] recaudo;
 
-    public AdaptadorRecaudo(Context context, Recaudo[] recaudo) {
+    public AdaptadorRecaudo(Context context, RecaudoVo[] recaudo) {
         super(context,android.R.layout.simple_list_item_1,recaudo);
         this.recaudo = recaudo;
     }
@@ -30,19 +30,19 @@ public class AdaptadorRecaudo extends ArrayAdapter
     {
         if (convertView==null) {
             LayoutInflater li = LayoutInflater.from(getContext());
-            convertView = li.inflate(R.layout.lv_bus_item,null);
+            convertView = li.inflate(R.layout.lv_recaudo,null);
         }
         ImageView iv = (ImageView)convertView.findViewById(
                 R.id.imageView);
         TextView tv = (TextView)convertView.findViewById(
-                R.id.txtNombre);
+                R.id.txtMonto);
         TextView pl = (TextView)convertView.findViewById(
-                R.id.txtplaca);
+                R.id.txtFecha);
         String horaSalida = recaudo[position].getRecaudo();
         int idImg=R.drawable.dw_recaudo;
 
         iv.setImageResource(idImg);
-        tv.setText("Recaudo: "+recaudo[position].getRecaudo());
+        tv.setText("RecaudoVo: "+recaudo[position].getRecaudo());
         pl.setText("Fecha: "+recaudo[position].getFecha());
 
         return convertView;

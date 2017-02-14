@@ -28,25 +28,25 @@ public class CrearRecaudo extends AppCompatActivity
     }
     public void guardar(View v)
     {
-        ec.edu.epn.proyecto2.Objetos.Recaudo rN = new ec.edu.epn.proyecto2.Objetos.Recaudo();
+        RecaudoVo rN = new RecaudoVo();
         rN.setRecaudo(monto.getText().toString());
         rN.setFecha(fecha.getText().toString());
         GuardarRest gF= new GuardarRest();
         gF.execute(rN);
-        Intent i = new Intent (this, SubMenuHistorial.class);
+        Intent i = new Intent (this, RecaudoSegundo.class);
         i.putExtra("bus",u);
         startActivity(i);
     }
-    public class GuardarRest extends AsyncTask<ec.edu.epn.proyecto2.Objetos.Recaudo,Void,String>
+    public class GuardarRest extends AsyncTask<RecaudoVo,Void,String>
     {
         @Override
-        protected String doInBackground(ec.edu.epn.proyecto2.Objetos.Recaudo... recaudos) {
+        protected String doInBackground(RecaudoVo... recaudos) {
             final String url = DireccionIP.ip+"SvrRecaudo/insertarRecaudo?" +
-                    "recaudo={monto}&info={pcla}&fecha={}";
+                    "recaudo={monto}&info={pcla}&fecha={f}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().
                     add(new StringHttpMessageConverter());
-            ec.edu.epn.proyecto2.Objetos.Recaudo rN = recaudos[0];
+            RecaudoVo rN = recaudos[0];
             String r = restTemplate.getForObject(url,String.class,
                     rN.getRecaudo(),
                     u.getPlaca(),

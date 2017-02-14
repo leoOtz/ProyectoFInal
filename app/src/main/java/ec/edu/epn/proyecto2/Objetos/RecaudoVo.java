@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Juan on 12/02/2017.
  */
 
-public class Recaudo implements Serializable
+public class RecaudoVo implements Serializable
 {
 
     private String recaudo;
@@ -26,7 +26,9 @@ public class Recaudo implements Serializable
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    public Recaudo() {
+
+    public RecaudoVo()
+    {
         super();
     }
 }

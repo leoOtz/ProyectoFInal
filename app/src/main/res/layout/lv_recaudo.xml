@@ -16,14 +16,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtFechaSalida"
+            android:id="@+id/txtMonto"
             android:textSize="@dimen/btnGrande"
             android:text="@string/btn_Recaudo"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtFechalllegada"
+            android:id="@+id/txtFecha"
             android:textSize="@dimen/btnGrande"
             android:text="@string/fecha"
             />

@@ -1,12 +1,16 @@
 package ec.edu.epn.proyecto2;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Checkable;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 /**
@@ -15,92 +19,119 @@ import android.widget.Toast;
 
 public class requisitosbus extends AppCompatActivity{
 
-    CheckBox ch1,ch2,ch3,ch4,ch5,ch6,ch7;
+    android.widget.TextView TV;
+
+
+    private Spinner cmblicencia;
+    private Spinner cmbmatricula;
+    private Spinner cmbllantas;
+    private Spinner cmbluces;
+    private Spinner cmbplumas;
+    private Spinner cmbrtv;
+
+
+    private SharedPreferences preferencias;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requistosbuses);
-        ch1=(CheckBox)findViewById(R.id.checkbox_requi1);
-        ch2=(CheckBox)findViewById(R.id.checkbox_requi2);
-        ch3=(CheckBox)findViewById(R.id.checkbox_requi3);
-        ch4=(CheckBox)findViewById(R.id.checkbox_requi4);
-        ch5=(CheckBox)findViewById(R.id.checkbox_requi5);
-        ch6=(CheckBox)findViewById(R.id.checkbox_requi6);
-        ch7=(CheckBox)findViewById(R.id.checkbox_requi7);
-ch1.setOnClickListener(new OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        //is chkIos checked?
-        if (((CheckBox) v).isChecked()) {
-            Toast.makeText(requisitosbus.this,
-                    "Bro, try Android :)", Toast.LENGTH_LONG).show();
-        }
+
+        preferencias = getPreferences(Context.MODE_PRIVATE);
+
+
+
+        cmblicencia = (Spinner) findViewById(R.id.cmblicencia);
+        String[] datos = new String[]{"Vigente", "Caducada", "Certificado"};
+        ArrayAdapter<String> aa = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datos);
+        cmblicencia.setAdapter(aa);
+
+
+        cmbmatricula = (Spinner) findViewById(R.id.cmbmatricula);
+        String[] datosm = new String[]{"Vigente", "Caducada"};
+        ArrayAdapter<String> bb = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datosm);
+        cmbmatricula.setAdapter(bb);
+
+        cmbllantas = (Spinner) findViewById(R.id.cmbllantas);
+        String[] datosll = new String[]{"Lisas", "Semi Nuevas", "Nuevas"};
+        ArrayAdapter<String> ll = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datosll);
+        cmbllantas.setAdapter(ll);
+
+        cmbluces = (Spinner) findViewById(R.id.cmbluces);
+        String[] datosl = new String[]{"Buen Estado", "Defectuosas"};
+        ArrayAdapter<String> l = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datosl);
+        cmbluces.setAdapter(l);
+
+        cmbplumas = (Spinner) findViewById(R.id.cmbplumas);
+        String[] datosp = new String[]{"Buen Estado", "Defectuosas"};
+        ArrayAdapter<String> p = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datosp);
+        cmbplumas.setAdapter(p);
+
+
+
+        cmbrtv = (Spinner) findViewById(R.id.cmbrtv);
+        String[] datosr = new String[]{"Vigente", "Caducada"};
+        ArrayAdapter<String> r = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1,
+                        datosr);
+        cmbrtv.setAdapter(r);
+
+
+
+
 
     }
-});
-        ch1.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //is chkIos checked?
-
-
-            }
-        });
-        ch2.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //is chkIos checked?
-                if (((CheckBox) v).isChecked()) {
-                    Toast.makeText(requisitosbus.this,
-                            "Habilitado para manejar", Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
-        ch3.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
-        ch4.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
-        ch5.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        ch6.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
-        ch7.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public void regresarBus(View v){
+    public void inicio(View v){
 
         Intent i = new Intent(this,estadobuses.class);
         startActivity(i);
+    }
+
+
+    public void guardar(View v) {
+
+        SharedPreferences.Editor ed = preferencias.edit();
+
+
+        ed.putInt("licencia", cmblicencia.getSelectedItemPosition());
+        ed.putInt("matricula", cmbmatricula.getSelectedItemPosition());
+        ed.putInt("llantas", cmbllantas.getSelectedItemPosition());
+        ed.putInt("luces", cmbluces.getSelectedItemPosition());
+        ed.putInt("plumas", cmbplumas.getSelectedItemPosition());
+        ed.putInt("rtv", cmbrtv.getSelectedItemPosition());
+
+        Toast.makeText(requisitosbus.this,
+                "Cambios Guardados Exitosamente", Toast.LENGTH_LONG).show();
+
+        ed.commit();
+
+
+
+    }
+
+    public void onResume(){
+
+
+        super.onResume();
+        cmblicencia.setSelection(preferencias.getInt("licencia",0));
+        cmbmatricula.setSelection(preferencias.getInt("matricula",0));
+        cmbllantas.setSelection(preferencias.getInt("llantas",0));
+        cmbplumas.setSelection(preferencias.getInt("luces",0));
+        cmbluces.setSelection(preferencias.getInt("plumas",0));
+        cmbrtv.setSelection(preferencias.getInt("rtv",0));
+
+
+
     }
 
 

@@ -1,107 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_ajustes"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ec.edu.epn.proyecto2.ajustes"
-    android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-
-
-    <LinearLayout
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_ajustes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="  AJUSTES "
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="ec.edu.epn.proyecto2.ajustes"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawHorizontalTrack="false">
+
+
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/titulo"
-            android:layout_weight="1"
-            android:textSize="25dp"
-            android:textAlignment="center"/>
+            android:orientation="horizontal">
+            <TextView
+                android:text="  AJUSTES "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titulo"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:textAlignment="center"/>
 
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/frmInicio"
-            android:drawableLeft="@drawable/img_inicio"
-            android:ems="10"
-            android:onClick="inicio"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frmInicio"
+                android:drawableLeft="@drawable/img_inicio"
+                android:ems="10"
+                android:onClick="inicio"/>
 
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-
-
-
-
-        <TextView
-            android:text="Fuente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:layout_weight="1"
-            android:textSize="25dp"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fuente1"
-            android:onClick="cambiar"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fuente2"
-            android:onClick="cambiar2"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fuente3"
-            android:onClick="cambiar3"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:text="Tamaño"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/textView2"
-            android:layout_weight="1"
-            android:textSize="35dp"/>
-
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,26 +52,160 @@
             android:orientation="horizontal">
 
 
-            <Button
-                android:layout_width="wrap_content"
+
+
+
+
+            <TextView
+                android:text="Fuente"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="10"
-                android:onClick="cambiart"/>
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:textSize="25dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12"
-                android:onClick="cambiart2"/>
+                android:text="Fuente1"
+                android:onClick="cambiar"/>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14"
-                android:onClick="cambiart3"/>
+                android:text="Fuente2"
+                android:onClick="cambiar2"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuente3"
+                android:onClick="cambiar3"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:text="Tamaño"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView2"
+                android:layout_weight="1"
+                android:textSize="35dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:onClick="cambiart"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:onClick="cambiart2"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+                    android:onClick="cambiart3"/>
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
 
-    </LinearLayout>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_notificacion"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbNotificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_sonido"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbSonido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_led"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbLed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_flash"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <Spinner
+            android:id="@+id/cmbFlash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_guardar"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/img_preferencias"
+            android:onClick="guardar"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

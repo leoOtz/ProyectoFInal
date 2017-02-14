@@ -12,30 +12,32 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import ec.edu.epn.proyecto2.Objetos.Bus;
+import ec.edu.epn.proyecto2.Objetos.RecaudoVo;
 import ec.edu.epn.proyecto2.Utilitarios.DireccionIP;
 
 public class Recaudo extends AppCompatActivity {
     private Bus u;
-    private ec.edu.epn.proyecto2.Objetos.Recaudo rO;
+    private RecaudoVo rO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.racaudo_1);
         u = (Bus)getIntent().getSerializableExtra("bus");
-        rO = (ec.edu.epn.proyecto2.Objetos.Recaudo)getIntent().getSerializableExtra("fecha");
+        rO = (RecaudoVo) getIntent().getSerializableExtra("recaudo");
+       Log.v("recaudo", rO.getFecha());
     }
     public void editarRecaudo(View v)
     {
         Intent i = new Intent(this, EditarRecaudo.class);
         i.putExtra("bus", u);
-        i.putExtra("fecha",rO);
+        i.putExtra("recaudo",rO);
         Log.v("bus", u.getPlaca());
         startActivity(i);
     }
     public void eliminarRecaudo(View v)
     {
-        ec.edu.epn.proyecto2.Objetos.Recaudo rN = rO;
+        RecaudoVo rN = rO;
         Log.v("BUS", u.getPlaca());
         EliminarRest eB =new EliminarRest();
         eB.execute(rN);
@@ -43,15 +45,15 @@ public class Recaudo extends AppCompatActivity {
         i.putExtra("bus", u);
         startActivity(i);
     }
-    public class EliminarRest extends AsyncTask<ec.edu.epn.proyecto2.Objetos.Recaudo,Void,String>
+    public class EliminarRest extends AsyncTask<RecaudoVo,Void,String>
     {
         @Override
-        protected String doInBackground(ec.edu.epn.proyecto2.Objetos.Recaudo... recaudos) {
+        protected String doInBackground(RecaudoVo... recaudos) {
             final String url = DireccionIP.ip+"SvrRecaudo/elimarRecaudo?" +
                     "info={pcla}&fecha={f}";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
-            ec.edu.epn.proyecto2.Objetos.Recaudo rB = recaudos[0];
+            RecaudoVo rB = recaudos[0];
             Log.v("bus", u.getPlaca());
             String r = restTemplate.getForObject(url,String.class,
                     u.getPlaca(),
